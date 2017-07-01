@@ -41,7 +41,7 @@ dependencies{
 task buildAngular(type:Exec) {
 	doFirst{
 		workingDir 'src/main/webapp/key-clock-client'
-		commandLine 'ng', 'build', 'prod', '--no-sourcemap'
+		commandLine 'ng', 'build', '--prod', '--no-sourcemap'
 		standardOutput = new ByteArrayOutputStream()
 		ext.output = {
 				return standardOutput.toString()
